@@ -15,8 +15,8 @@ var conf = fs.existsSync(CONFIG) ? require(CONFIG) : {}
 var argv = minimist(process.argv.slice(2), {alias:{configure:'c'}, boolean:'c'})
 
 var dir = argv._[0]
-//var repo = argv._[1]
-var repo = 'https://github.com/alsacreations/bretzel/archive/master.tar.gz'
+var repo = argv._[1]
+//var repo = 'https://github.com/alsacreations/bretzel/archive/master.tar.gz'
 var name = dir && path.basename(dir)
 
 var parse = function(str) {
@@ -28,10 +28,15 @@ var parse = function(str) {
   var repo = parts.pop()
   var user = parts.pop()
 
+//  return {
+//    user: user,
+//    repo: repo,
+//    branch: branch
+//  }
   return {
-    user: user,
-    repo: repo,
-    branch: branch
+    user: alsacreations,
+    repo: bretzel,
+    branch: master
   }
 }
 
