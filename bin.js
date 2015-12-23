@@ -16,7 +16,6 @@ var argv = minimist(process.argv.slice(2), {alias:{configure:'c'}, boolean:'c'})
 
 var dir = argv._[0]
 var repo = argv._[1]
-//var repo = 'https://github.com/alsacreations/bretzel/archive/master.tar.gz'
 var name = dir && path.basename(dir)
 
 var parse = function(str) {
@@ -28,16 +27,12 @@ var parse = function(str) {
   var repo = parts.pop()
   var user = parts.pop()
 
-//  return {
-//    user: user,
-//    repo: repo,
-//    branch: branch
-//  }
   return {
-    user: alsacreations,
-    repo: bretzel,
-    branch: master
+    user: user,
+    repo: repo,
+    branch: branch
   }
+
 }
 
 if (argv.configure) {
@@ -153,7 +148,6 @@ else if (argv.url) {
 
   gzipSrc = repo.user+'/'+repo.repo+'#'+repo.branch
   gzipStream = request('https://github.com/'+repo.user+'/'+repo.repo+'/archive/'+repo.branch+'.tar.gz')
-//  gzipStream = request('https://github.com/alsacreations/bretzel/archive/master.tar.gz')
   gzipStream.on('response', failedHttp)
 }
 
