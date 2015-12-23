@@ -53,4 +53,4 @@ bretzel-start .
 
 ## License
 
-MIT
+MIT (auteur initial : Mathias Buus, cloné et adapté pour Alsacréations)
