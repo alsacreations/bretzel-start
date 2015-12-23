@@ -146,7 +146,8 @@ else if (argv.url) {
   if (!repo || !name) return usage()
 
   gzipSrc = repo.user+'/'+repo.repo+'#'+repo.branch
-  gzipStream = request('https://github.com/'+repo.user+'/'+repo.repo+'/archive/'+repo.branch+'.tar.gz')
+//  gzipStream = request('https://github.com/'+repo.user+'/'+repo.repo+'/archive/'+repo.branch+'.tar.gz')
+  gzipStream = request('https://github.com/alsacreations/bretzel/archive/master.tar.gz')
   gzipStream.on('response', failedHttp)
 }
 
