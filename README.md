@@ -1,10 +1,9 @@
-# create-project
+# bretzel-start
 
 Create a new project based on a branch in a github repo. Supports basic format strings
 
 ```
-npm install -g create-project
-create-project # prints out a help
+npm install -g bretzel-start
 ```
 
 ## Usage

@@ -1,7 +1,7 @@
 {
-  "name": "create-project",
-  "version": "1.2.1",
-  "description": "Create a new project based on a branch in a github repo. Supports basic format strings",
+  "name": "bretzel-start",
+  "version": "1.0.0",
+  "description": "createur de projets Bretzel",
   "main": "bin.js",
   "dependencies": {
     "gunzip-maybe": "^1.0.2",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/create-project"
+    "url": "https://github.com/alsacreations/bretzel-start"
   },
   "keywords": [
     "create",
@@ -29,7 +29,7 @@
   "author": "Mathias Buus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/create-project/issues"
+    "url": "https://github.com/alsacreations/bretzel-start/issues"
   },
-  "homepage": "https://github.com/mafintosh/create-project"
+  "homepage": "https://github.com/alsacreations/bretzel-start"
 }
