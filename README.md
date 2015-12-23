@@ -1,51 +1,54 @@
 # bretzel-start
 
-Create a new project based on a branch in a github repo. Supports basic format strings
+Createur de nouveau projet HTML / CSS / JS en une ligne de commande.
+
+Installez **Bretzel Start** via npm :
 
 ```
 npm install -g bretzel-start
 ```
 
-## Usage
+## votre première fois ?
 
-To use this first create a new repo to contain your project templates.
-An example of this could be [mafintosh/templates](https://github.com/mafintosh/templates)
+Une fois installé globalement sur votre ordinateur (étape précédente), **Bretzel Start** permet de créer un nouveau projet basé sur [Bretzel](https://github.com/alsacreations/bretzel).
 
-To create a new project simply do
+Il lui suffit de connaître : 
+- le nom de votre projet (il va créer le dossier)
+- le repo du projet à récupérer (ce sera "alsacreations/bretzel")
 
-```
-create-project new-project-name mafintosh/templates
-```
-
-If files in your template repo contains format string (`{{variable}}`) you can override the value using
-a command line parameter with the same name (`--variable [value]`)
-
-Per default the variable `name` is set to the project name
-
-## Other Sources
-
-Sometimes your templates dont live in github, so here are some alternate ways to retrieve them
+Voici la syntaxe :
 
 ```
-create-project new-project-name --url=http://gitlab.internal.com/project-templates/npm-module/repository/archive.tar.gz?ref=master
-create-project new-project-name --file=archive.tar.gz
+bretzel-start nom-du-projet alsacreations/bretzel
+```
+
+Ou si vous êtes déjà dans le dossier de votre projet :
+
+```
+bretzel-start . alsacreations/bretzel
 ```
 
 
-## Defaults
+## pour aller plus vite encore
 
-If you don't want to type the repo name everytime or want to store default format variables, use `--configure`
+Si vous ne souhaitez pas préciser systématiquement le chemin vers le repo de bretzel, il est possible d'enregistrer votre configuration par défaut pour toutes les fois suivantes via `--configure`.
 
 ```
 create-project --configure
-Set repository: mafintosh/templates
+Set repository: alsacreations/bretzel
 Set key=value: (blank to skip) foo=bar
 ```
 
-Then to create a new project just do
+Puis il vous suffira de créer votre projet ainsi :
 
 ```
-create-project new-project-name
+bretzel-start nom-du-projet
+```
+
+Ou encore mieux si vous êtes déjà dans le dossier de votre projet :
+
+```
+bretzel-start .
 ```
 
 ## License
