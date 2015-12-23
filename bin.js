@@ -9,7 +9,7 @@ var read = require('read')
 var fs = require('fs')
 var path = require('path')
 
-var CONFIG = path.join(process.env.HOME || process.env.USERPROFILE, '.config/create-project.json')
+var CONFIG = path.join(process.env.HOME || process.env.USERPROFILE, '.config/bretzel-start.json')
 
 var conf = fs.existsSync(CONFIG) ? require(CONFIG) : {}
 var argv = minimist(process.argv.slice(2), {alias:{configure:'c'}, boolean:'c'})
@@ -99,7 +99,7 @@ if (argv.configure) {
 var usage = function() {
   var def = conf.github ? conf.github.user+'/'+conf.github.repo+'#'+conf.github.branch : 'user/repo#branch'
 
-  console.error('create-project [name] [%s]', def)
+  console.error('bretzel-start [name] [%s]', def)
   console.error('')
   console.error('  --configure,-c  to set default repo/parameters')
   console.error('  --[key]=[val]   to pass format parameters')

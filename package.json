@@ -1,6 +1,6 @@
 {
   "name": "bretzel-start",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "createur de projets Bretzel",
   "main": "bin.js",
   "dependencies": {
@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "bin": {
-    "create-project": "./bin.js"
+    "bretzel-start": "./bin.js"
   },
   "repository": {
     "type": "git",
