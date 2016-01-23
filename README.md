@@ -34,7 +34,7 @@ bretzel-start . alsacreations/bretzel
 Si vous ne souhaitez pas préciser systématiquement le chemin vers le repo de bretzel, il est possible d'enregistrer votre configuration par défaut pour toutes les fois suivantes via `--configure`.
 
 ```
-create-project --configure
+bretzel-start --configure
 Set repository: alsacreations/bretzel
 Set key=value: (blank to skip) foo=bar
 ```
